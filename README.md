@@ -29,7 +29,7 @@ Kakao arena 2nd Competition - Brunch article recommendation
 * 기본값은 test.users로 설정되어 있음
 * dev.users에 대해 추천을 하고 싶다면, 소스 코드 하단에 주석 처리 변경
 #### 3) 결과 파일 'recommend.txt' 생성 확인
-* 동일 디렉터리에 생성
+* 기본값은 동일 디렉터리에 생성
 * 다른 곳에 파일을 생성하고 싶다면, recommender 함수의 마지막 입력값에 경로 입력
 
 ![main](https://user-images.githubusercontent.com/50820635/61270051-75f24980-a7db-11e9-937e-286efd8f8baf.JPG)
