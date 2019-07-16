@@ -4,7 +4,7 @@ Kakao arena 2nd Competition - Brunch article recommendation
 ## 1. 간단한 설명
 
 ## 2. 재현 방법
-### Step 1. 데이터 및 소스코드 다운로드
+### Step 1. 데이터 및 소스 코드 다운로드
 #### 1) res 폴더에 들어갈 파일 다운로드
 * [카카오 아레나 브런치 데이터셋](https://arena.kakao.com/c/2/data)
 * magazine.json, metadata.json, users.json, predict.tar, read.tar 다운로드
@@ -19,3 +19,17 @@ Kakao arena 2nd Competition - Brunch article recommendation
 * [BrunchRec.ipynb](https://github.com/jihoo-kim/BrunchRec/archive/master.zip)
 
 ![dir](https://user-images.githubusercontent.com/50820635/61267897-a5ea1e80-a7d4-11e9-8925-300b2783f087.jpg)
+
+
+### Step 2. 
+#### 1) Jupyter Notebook으로 BrunchRec.ipynb 파일 열기
+* Jupyter Notebook이 없을 경우 [설치](https://jupyter.org/install)
+#### 2) 상단 메뉴에서 'Kernel' -> 'Restart & Run All' 클릭
+* 또는 '앞으로 되감기(▶▶)' 아이콘 클릭
+* 기본값은 test.users로 설정되어 있음
+* dev.users에 대해 추천을 하고 싶다면, 소스 코드 하단에 주석 처리 변경
+#### 3) 결과 파일 'recommend.txt' 생성 확인
+* 동일 디렉터리에 생성
+* 다른 곳에 파일을 생성하고 싶다면, recommender 함수의 마지막 입력값에 경로 입력
+
+![main](https://user-images.githubusercontent.com/50820635/61270051-75f24980-a7db-11e9-937e-286efd8f8baf.JPG)
