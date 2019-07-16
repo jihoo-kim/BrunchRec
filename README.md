@@ -6,7 +6,7 @@ Kakao arena 2nd Competition - Brunch article recommendation
 ## 2. 재현 방법
 ### Step 1. 데이터 및 소스코드 다운로드
 #### 1) res 폴더에 들어갈 파일 다운로드
-* 카카오 아레나 브런치 데이터셋 (원본)
+* 카카오 아레나 브런치 데이터셋 ([원본 링크](https://arena.kakao.com/c/2/data))
 * magazine.json, metadata.json, users.json, predict.tar, read.tar 다운로드
 * predict.tar, read.tar은 res 폴더에 아래와 같이 압축 해제
 * contents 폴더의 data.0 ~ data.6은 다운로드할 필요 없음
