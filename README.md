@@ -13,7 +13,7 @@ Kakao arena 2nd Competition - Brunch article recommendation
 #### 2) pickle 폴더에 들어갈 파일 다운로드
 * 중간 데이터 파일 (시간 단축)
 * [dev.users용](https://drive.google.com/file/d/1lrVDWtpOuc-slylHgw60Lljfoh1HGU2B/view?usp=sharing)
-* test.users용 (준비중)
+* [test.users용](https://drive.google.com/file/d/1JP1Z6mOxViO1UR3HHosZJdguj4Oli97I/view?usp=sharing)
 #### 3) BrunchRec.ipynb 파일 다운로드
 
 
