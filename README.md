@@ -2,6 +2,15 @@
 Kakao arena 2nd Competition - Brunch article recommendation
 
 ## 1. 간단한 설명
+### 1. 개요
+* 준비중
+### 2. 추천 방식
+#### 1) Following based 추천
+#### 2) Magazine based 추천
+#### 3) Tag based 추천
+#### 4) Item based CF 추천
+#### 5) Popularity based 추천
+
 
 ## 2. 재현 방법
 ### Step 1. 데이터 및 소스 코드 다운로드
@@ -20,6 +29,7 @@ Kakao arena 2nd Competition - Brunch article recommendation
 
 ![dir](https://user-images.githubusercontent.com/50820635/61267897-a5ea1e80-a7d4-11e9-8925-300b2783f087.jpg)
 
+***
 
 ### Step 2. 소스 코드 실행 및 결과 파일 확인
 #### 1) Jupyter Notebook으로 BrunchRec.ipynb 파일 열기
@@ -32,4 +42,4 @@ Kakao arena 2nd Competition - Brunch article recommendation
 * 기본값은 동일 디렉터리에 생성
 * 다른 곳에 파일을 생성하고 싶다면, recommender 함수의 마지막 입력값에 경로 입력
 
-![main](https://user-images.githubusercontent.com/50820635/61270051-75f24980-a7db-11e9-937e-286efd8f8baf.JPG)
+![main](https://user-images.githubusercontent.com/50820635/61272461-2c592d00-a7e2-11e9-8772-fac02fddbcd8.JPG)
