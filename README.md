@@ -21,7 +21,7 @@ Kakao arena 2nd Competition - Brunch article recommendation
 ![dir](https://user-images.githubusercontent.com/50820635/61267897-a5ea1e80-a7d4-11e9-8925-300b2783f087.jpg)
 
 
-### Step 2. 
+### Step 2. 소스 코드 실행 및 결과 파일 확인
 #### 1) Jupyter Notebook으로 BrunchRec.ipynb 파일 열기
 * Jupyter Notebook이 없을 경우 [설치](https://jupyter.org/install)
 #### 2) 상단 메뉴에서 'Kernel' -> 'Restart & Run All' 클릭
