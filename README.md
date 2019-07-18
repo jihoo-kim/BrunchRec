@@ -27,7 +27,7 @@ Kakao arena 2nd Competition - Brunch article recommendation
 * 소스 코드 파일 (Jupyter Notebook)
 * [BrunchRec.ipynb](https://github.com/jihoo-kim/BrunchRec/archive/master.zip)
 
-![dir](https://user-images.githubusercontent.com/50820635/61267897-a5ea1e80-a7d4-11e9-8925-300b2783f087.jpg)
+![dir_small](https://user-images.githubusercontent.com/50820635/61439308-4a5a9500-a97c-11e9-9ce9-370efd41f185.jpg)
 
 ***
 
@@ -35,11 +35,8 @@ Kakao arena 2nd Competition - Brunch article recommendation
 #### 1) Jupyter Notebook으로 BrunchRec.ipynb 파일 열기
 * Jupyter Notebook이 없을 경우 [설치](https://jupyter.org/install)
 #### 2) 상단 메뉴에서 'Kernel' -> 'Restart & Run All' 클릭
-* 또는 '앞으로 되감기(▶▶)' 아이콘 클릭
 * 기본값은 test.users로 설정되어 있음
 * dev.users에 대해 추천을 하고 싶다면, 소스 코드 하단에 주석 처리 변경
 #### 3) 결과 파일 'recommend.txt' 생성 확인
-* 기본값은 동일 디렉터리에 생성
-* 다른 곳에 파일을 생성하고 싶다면, recommender 함수의 마지막 입력값에 경로 입력
-
-![main](https://user-images.githubusercontent.com/50820635/61272461-2c592d00-a7e2-11e9-8772-fac02fddbcd8.JPG)
+* 기본값은 동일 디렉터리에 결과 파일 생성
+* 다른 곳에 결과 파일을 생성하고 싶다면, recommender 함수의 마지막 입력값에 경로 입력
