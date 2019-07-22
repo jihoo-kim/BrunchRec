@@ -5,11 +5,11 @@ Kakao arena 2nd Competition - Brunch article recommendation
 ### 1. 개요
 * 준비중
 ### 2. 추천 방식
-#### 1) Following based 추천
-#### 2) Magazine based 추천
-#### 3) Tag based 추천
-#### 4) Item based CF 추천
-#### 5) Popularity based 추천
+#### 1) popularity based 추천
+#### 2) following based 추천
+#### 3) magazine based 추천
+#### 4) tag based 추천
+#### 5) behavior based 추천
 
 
 ## 2. 재현 방법
@@ -21,13 +21,13 @@ Kakao arena 2nd Competition - Brunch article recommendation
 * contents 폴더의 data.0 ~ data.6은 다운로드할 필요 없음
 #### 2) pickle 폴더에 들어갈 파일 다운로드
 * 중간 데이터 파일 (시간 단축)
-* [dev.users용](https://drive.google.com/file/d/1SE7PtHmENdigQ7NqvPt_xqwSCjAOXHAF/view?usp=sharing)
+* [dev.users용](https://drive.google.com/file/d/1HsbKRtLLMXLstUnlGJTi7RF3g_HiLCrL/view?usp=sharing)
 * [test.users용] (준비중)
 #### 3) BrunchRec.ipynb 파일 다운로드
 * 소스 코드 파일 (Jupyter Notebook)
 * [BrunchRec.ipynb](https://github.com/jihoo-kim/BrunchRec/archive/master.zip)
 
-![dir_small](https://user-images.githubusercontent.com/50820635/61439308-4a5a9500-a97c-11e9-9ce9-370efd41f185.jpg)
+![dir_small](https://user-images.githubusercontent.com/50820635/61609649-bd704e00-ac91-11e9-83f5-d70d8379dbfc.jpg)
 
 ***
 
