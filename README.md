@@ -10,13 +10,13 @@ Kakao arena 2nd Competition - Brunch article recommendation
 * popularity_based_recommend2: 전체 기간 동안 조회수가 높은 인기 글을 추천
 
 #### 2) following based 추천
-* following_based_recommend: target user가 최근 또는 전체 기간 동안 읽은 글 중에서 구독작가 글의 비율을 고려하여 추천
-* following_based_recommend2: target user가 구독하는 작가의 글을 추천 (읽지 않아서 구독작가의 글을 추천하지 않는 경우에 대비)
+* following_based_recommend: 읽은 글 중에서 구독작가 글의 비율을 고려하여 추천
+* following_based_recommend2: 구독하는 작가의 글을 추천 (읽지 않아서 추천되지 않는 경우에 대비)
 
 #### 3) magazine based 추천
-* magazine_based_recommend: target user가 최근 또는 전체 기간 동안 읽은 글 중에서 매거진 글의 비율을 고려하여 추천
+* magazine_based_recommend: 읽은 글 중에서 매거진 글의 비율을 고려하여 추천
 #### 4) tag based 추천
-* tag_based_recommend: target user가 최근 또는 전체 기간 동안 읽은 글들에서 자주 나오는 태그를 고려하여 추천
+* tag_based_recommend: 읽은 글들에서 자주 나오는 태그를 고려하여 추천
 
 #### 5) hybrid based 추천
 * 사용자의 소비 경향을 반영하여 종합적으로 추천
