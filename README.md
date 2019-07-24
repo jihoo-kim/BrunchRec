@@ -6,7 +6,7 @@ Kakao arena 2nd Competition - Brunch article recommendation
 * 사용자의 소비 경향을 반영하여 아래와 같은 아이디어를 구현
 * 구독하는 작가의 글을 많이 읽을 것 → following based
 * 주로 읽는 매거진의 글을 많이 읽을 것 → magazine based
-* 주로 읽는 글의 태그와 비슷한 태그를 가진 글을 읽을 것 → tag based
+* 읽는 글의 태그와 비슷한 태그를 가진 글을 읽을 것 → tag based
 * 최근에 발행되었거나 인기가 많은 글을 읽을 것 → popularity based
 
 ### 2. 추천 방식
