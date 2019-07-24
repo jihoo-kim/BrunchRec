@@ -10,11 +10,7 @@
 
 ## 1. 간단한 설명
 ### 1. 개요
-* 사용자의 소비 경향을 반영하여 아래와 같은 아이디어를 구현
-* 구독하는 작가의 글을 많이 읽을 것 → following based
-* 주로 읽는 매거진의 글을 많이 읽을 것 → magazine based
-* 읽는 글의 태그와 비슷한 태그를 가진 글을 읽을 것 → tag based
-* 최근에 발행되었거나 인기가 많은 글을 읽을 것 → popularity based
+* 사용자의 글 소비 경향을 반영하여 추천
 
 ### 2. 추천 방식
 #### 1) popularity based 추천
@@ -29,12 +25,14 @@
 * magazine_based_recommend: 읽은 글 중에서 매거진 글의 비율을 고려하여 추천
 #### 4) tag based 추천
 * tag_based_recommend: 읽은 글들에서 자주 나오는 태그를 고려하여 추천
+#### 5) collaborative filtering 추천
+* cf_based_recommend: 아이템 기반 협업필터링
 
-#### 5) hybrid based 추천
+#### 6) hybrid based 추천
 * hybrid_recommned: 사용자의 소비 경향을 반영하여 종합적으로 추천
 * recent 모드: 최근 읽은 글이 많을 경우, 최근 소비 경향을 반영
 * read 모드: 최근 읽은 글이 적을 경우, 전체 소비 경향을 반영
-#### 6) recommender
+#### 7) recommender
 * 시간 단축을 위해 metadata의 전체가 아닌 일부만 탐색
 * metadata_all -> 처음 ~ 2019.03.14 동안 발행된 글을 제외한 metadata
 * metadata_reg -> 2018.09.15 ~ 2019.03.14 동안 발행된 글의 metadata
