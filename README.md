@@ -27,7 +27,7 @@ Kakao arena 2nd Competition - Brunch article recommendation
 * 소스 코드 파일 (Jupyter Notebook)
 * [BrunchRec.ipynb](https://github.com/jihoo-kim/BrunchRec/archive/master.zip)
 
-![dir_small](https://user-images.githubusercontent.com/50820635/61609649-bd704e00-ac91-11e9-83f5-d70d8379dbfc.jpg)
+![dir_small](https://user-images.githubusercontent.com/50820635/61771159-01965680-ae2a-11e9-960f-162638459a3d.jpg)
 
 ***
 
