@@ -21,8 +21,8 @@ Kakao arena 2nd Competition - Brunch article recommendation
 * contents 폴더의 data.0 ~ data.6은 다운로드할 필요 없음
 #### 2) pickle 폴더에 들어갈 파일 다운로드
 * 중간 데이터 파일 (시간 단축)
-* [dev.users용](https://drive.google.com/file/d/1HsbKRtLLMXLstUnlGJTi7RF3g_HiLCrL/view?usp=sharing)
-* [test.users용] (준비중)
+* [dev.users용](https://drive.google.com/file/d/16IZSKdK8sFzeHx0Z07oH3HcbbYQZAkQJ/view?usp=sharing)
+* [test.users용](https://drive.google.com/file/d/1dbptjhjp7mduPnhchTfuRQe7wTNtgHfz/view?usp=sharing)
 #### 3) BrunchRec.ipynb 파일 다운로드
 * 소스 코드 파일 (Jupyter Notebook)
 * [BrunchRec.ipynb](https://github.com/jihoo-kim/BrunchRec/archive/master.zip)
