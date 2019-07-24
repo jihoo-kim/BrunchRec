@@ -1,5 +1,12 @@
-# BrunchRec
-Kakao arena 2nd Competition - Brunch article recommendation
+## Kakao arena 2nd Competition
+# "브런치 사용자를 위한 글 추천 대회"
+### brunch 데이터를 활용해 사용자의 취향에 맞는 글을 예측하는 대회
+* 공식 홈페이지: https://arena.kakao.com/c/2
+* 베이스 코드: https://github.com/kakao-arena/brunch-article-recommendation
+
+### BrunchRec 
+* designed by **datartist**
+* 깃헙 주소: https://github.com/jihoo-kim/BrunchRec  
 
 ## 1. 간단한 설명
 ### 1. 개요
