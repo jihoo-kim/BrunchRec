@@ -13,6 +13,15 @@
 * 사용자의 글 소비 경향을 반영하여 추천
 
 ### 2. 추천 방식
+#### 1) collaborative filtering 추천
+* cf_based_recommend: 아이템 기반 협업필터링
+* *ncsu(not_cold_start_users)*: 일정 기간 동안 읽은 article의 수가 평균보다 높은 users
+* *nlti(not_long_tail_items)*: 일정 기간 동안 view가 상위 5%인 article
+* Step 1: *ncsu*와 *nlti*에 대해서만 item-user matrix 생성
+* Step 2: item-user martix에서 item에 대해 cosine similarity 구하기
+* Step 3: 가장 비슷한 100개의 item의 weighted mean을 이용해 predict
+* Step 4: 각 user에 대해 weighted mean이 높은 상위 100개 article을 저장
+
 #### 1) popularity based 추천
 * popularity_based_recommend: 일정 기간 동안 조회수가 높은 인기 글을 추천
 * popularity_based_recommend2: 전체 기간 동안 조회수가 높은 인기 글을 추천
@@ -25,8 +34,7 @@
 * magazine_based_recommend: 읽은 글 중에서 매거진 글의 비율을 고려하여 추천
 #### 4) tag based 추천
 * tag_based_recommend: 읽은 글들에서 자주 나오는 태그를 고려하여 추천
-#### 5) collaborative filtering 추천
-* cf_based_recommend: 아이템 기반 협업필터링
+
 
 #### 6) hybrid based 추천
 * hybrid_recommned: 사용자의 소비 경향을 반영하여 종합적으로 추천
