@@ -55,10 +55,10 @@
 * read 모드: 최근 읽은 글이 하위 20%인 user들의 경우 -> 전체 소비(read) 경향을 반영
 
 #### 2) 시간 단축을 위해 metadata의 전체가 아닌 일부만 탐색
-* metadata_all -> 처음 ~ 2019.03.14 동안 발행된 글을 제외한 metadata
-* metadata_reg -> 2018.09.15 ~ 2019.03.14 동안 발행된 글의 metadata
-* metadata_pop -> 일정 기간 동안 view가 상위 20%인 글의 metadata
-* metadata_hot -> 추천 기간 동안 발행되었고, view가 상위 20%인 글의 metadata
+* metadata_all -> 추천 기간 이후에 발행된 글을 제외한 metadata (629,252개)
+* metadata_reg -> 추천 기간을 포함한 최근 6개월 동안 발행된 글의 metadata (127,218개)
+* metadata_pop -> 최근 view가 상위 20%인 글의 metadata (126,666개)
+* metadata_hot -> 추천 기간 동안 발행되었고, 최근 view가 상위 20%인 글의 metadata (5,011개)
 
 #### 3) 위의 5가지 추천 방식을 아래와 같은 순서로 추천
 * **f1**: metadata_hot에 대해 **following_based_recommend**을 이용하여 'recent_view(최근 조회수)' 순으로 추천 
@@ -73,7 +73,7 @@
 * **p2**: metadata에 대해 **popularity_based_recommend2**을 이용하여 추천 (100개가 되지 않았을 경우)
 
 ## 2. 재현 방법
-### Step 1. 데이터 및 소스 코드 다운로드
+### 1. 데이터 및 소스 코드 다운로드
 #### 1) res 폴더에 들어갈 파일 다운로드
 * [카카오 아레나 브런치 데이터셋](https://arena.kakao.com/c/2/data)
 * magazine.json, metadata.json, users.json, predict.tar, read.tar 다운로드
@@ -91,7 +91,7 @@
 
 ***
 
-### Step 2. 소스 코드 실행 및 결과 파일 확인
+### 2. 소스 코드 실행 및 결과 파일 확인
 #### 1) Jupyter Notebook으로 BrunchRec.ipynb 파일 열기
 * Jupyter Notebook이 없을 경우 [설치](https://jupyter.org/install)
 #### 2) 상단 메뉴에서 'Kernel' -> 'Restart & Run All' 클릭
@@ -100,3 +100,6 @@
 #### 3) 결과 파일 'recommend.txt' 생성 확인
 * 기본값은 동일 디렉터리에 결과 파일 생성
 * 다른 곳에 결과 파일을 생성하고 싶다면, recommender 함수의 마지막 입력값에 경로 입력
+
+### 3. 추천 결과 확인
+* recommend_result: user의 article 소비 
