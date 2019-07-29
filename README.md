@@ -16,38 +16,38 @@
 #### 1) collaborative filtering 추천
 * *ncsu(not_cold_start_users)*: 일정 기간(2019.02.15 ~ 2019.02.28) 동안 읽은 article의 수가 평균보다 높은 users
 * *nlti(not_long_tail_items)*: 일정 기간(2019.02.15 ~ 2019.02.28) 동안 view가 상위 5%인 article
-* **Step 1**: *ncsu*와 *nlti*에 대해서만 item-user matrix 생성
-* **Step 2**: item-user martix에서 item에 대해 cosine similarity 구하기
-* **Step 3**: 가장 비슷한 100개의 item의 weighted mean을 이용해 predict
-* **Step 4**: 각 user에 대해 weighted mean이 높은 상위 100개 article을 저장
-* collaborative filtering: 아이템 기반 협업필터링
+* Step 1: *ncsu*와 *nlti*에 대해서만 item-user matrix 생성
+* Step 2: item-user martix에서 item에 대해 cosine similarity 구하기
+* Step 3: 가장 비슷한 100개의 item의 weighted mean을 이용해 predict
+* Step 4: 각 user에 대해 weighted mean이 높은 상위 100개 article을 저장
+* **collaborative filtering**: 아이템 기반 협업필터링
 
 #### 2) popularity based 추천
 * 파레토 법칙(Pareto Principle): 전체 결과의 80%가 전체 원인의 20%에서 일어나는 현상
 * 인기 많은(=조회수 높은) 상위 20%의 article들이 많이 소비되는 경향이 있음
-* popularity_based_recommend: 일정 기간(2019.02.15 ~ 2019.02.28) 동안 조회수가 높은 인기 글을 추천
-* popularity_based_recommend2: 전체 기간(처음 ~ 2019.02.28) 동안 조회수가 높은 인기 글을 추천
+* **popularity_based_recommend**: 일정 기간(2019.02.15 ~ 2019.02.28) 동안 조회수가 높은 인기 글을 추천
+* **popularity_based_recommend2**: 전체 기간(처음 ~ 2019.02.28) 동안 조회수가 높은 인기 글을 추천
 
 #### 3) following based 추천
 * 브런치 플랫폼 특성상 구독하는 작가의 글을 많이 읽는 경향이 있음
 * 전체 user의 98%가 구독하는 작가가 있음 (평균 8.6명)
 * 일정 기간(2019.02.15 ~ 2019.02.28) 동안 읽은 글 중에서 구독 작가별 빈도수를 저장 ('recent_following')
 * 전체 기간(처음 ~ 2019.02.28) 동안 읽은 글 중에서 구독 작가별 빈도수를 저장 ('read_following')
-* following_based_recommend: 읽은 글 중에서 구독작가 글의 비율을 고려하여 추천 (비율이 클수록 많이 추천)
-* following_based_recommend2: 구독하는 작가의 글을 추천 (읽지 않아서 추천되지 않는 경우에 대비)
+* **following_based_recommend**: 읽은 글 중에서 구독작가 글의 비율을 고려하여 추천 (비율이 클수록 많이 추천)
+* **following_based_recommend2**: 구독하는 작가의 글을 추천 (읽지 않아서 추천되지 않는 경우에 대비)
 
 #### 4) magazine based 추천
 * 같은 매거진의 글을 많이 읽는 경향이 있음
 * 일정 기간(2019.02.15 ~ 2019.02.28) 동안 읽은 글 중에서 매거진별 빈도수를 저장 ('recent_magazine')
 * 전체 기간(처음 ~ 2019.02.28) 동안 읽은 글 중에서 매거진별 빈도수를 저장 ('read_magazine')
-* magazine_based_recommend: 읽은 글 중에서 매거진 글의 비율을 고려하여 추천
+* **magazine_based_recommend**: 읽은 글 중에서 매거진 글의 비율을 고려하여 추천
 
 #### 5) tag based 추천
 * 읽은 글들의 태그와 같은 태그를 가진 글을 읽는 경향이 있음
 * 읽은 글들의 태그는 user의 관심 키워드라고 볼 수 있음
 * 일정 기간(2019.02.15 ~ 2019.02.28) 동안 읽은 글의 빈도수 상위 6개를 user의 관심 키워드로 저장 ('recent_interest')
 * 전체 기간(처음 ~ 2019.02.28) 동안 읽은 글의 빈도수 상위 6개를 user의 관심 키워드로 저장 ('read_interest')
-* tag_based_recommend: user의 관심 키워드와 common_num(=2개) 이상 겹치는 태그를 가진 글을 추천
+* **tag_based_recommend**: user의 관심 키워드와 common_num(=2개) 이상 겹치는 태그를 가진 글을 추천
 
 ## 3. 추천 알고리즘
 #### 1) 최근 읽은 글의 수에 따라 맞춤형 추천
