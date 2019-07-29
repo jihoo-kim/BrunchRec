@@ -49,7 +49,7 @@
 * 전체 기간(처음 ~ 2019.02.28) 동안 읽은 글의 빈도수 상위 6개를 user의 관심 키워드로 저장 ('read_interest')
 * **tag_based_recommend**: user의 관심 키워드와 common_num(=2개) 이상 겹치는 태그를 가진 글을 추천
 
-## 3. 추천 알고리즘
+### 3. 추천 알고리즘
 #### 1) 최근 읽은 글의 수에 따라 맞춤형 추천
 * recent 모드: 최근 읽은 글의 수가 상위 80%인 user들의 경우 -> 최근 소비(recent) 경향을 반영
 * read 모드: 최근 읽은 글이 하위 20%인 user들의 경우 -> 전체 소비(read) 경향을 반영
@@ -72,7 +72,7 @@
 * **t**: metadata_hot에 대해 **tag_based_recommend**을 이용하여 'recent_view(최근 조회수)' 순으로 추천 
 * **p2**: metadata에 대해 **popularity_based_recommend2**을 이용하여 추천 (100개가 되지 않았을 경우)
 
-## 4. 재현 방법
+## 2. 재현 방법
 ### Step 1. 데이터 및 소스 코드 다운로드
 #### 1) res 폴더에 들어갈 파일 다운로드
 * [카카오 아레나 브런치 데이터셋](https://arena.kakao.com/c/2/data)
