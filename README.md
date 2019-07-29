@@ -114,9 +114,9 @@
 
 ### 3. 추천 결과 확인
 * recommend_result: user의 article 소비 경향 및 추천 글 top 30개 출력
-* fr(f_ratio) -> target user가 본 article 중에서 following의 비율
-* mr(m_ratio) -> target user가 본 article 중에서 magazine의 비율
-* pr(p_ratio) -> target user가 본 article 중에서 인기가 많은 글의 비율
-* rr(r_ratio) -> target user가 본 article 중에서 최근 발행된 글의 비율
+* fr(f_ratio) -> target user가 본(또는 추천된) article 중에서 following의 비율
+* mr(m_ratio) -> target user가 본(또는 추천된) article 중에서 magazine의 비율
+* pr(p_ratio) -> target user가 본(또는 추천된) article 중에서 인기가 많은 글의 비율
+* rr(r_ratio) -> target user가 본(또는 추천된) article 중에서 최근 발행된 글의 비율
 
 ![rec_result](https://user-images.githubusercontent.com/50820635/62028536-6e8b6100-b21b-11e9-81b6-7a2ba7d2b793.jpg)
