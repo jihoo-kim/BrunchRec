@@ -15,28 +15,28 @@
 ### 2. 추천 방식
 #### 1) collaborative filtering 추천
 * item based CF (아이템 기반 협업필터링)
-* *ncsu(not_cold_start_users)*: 일정 기간 동안 읽은 article의 수가 평균보다 높은 users
-* *nlti(not_long_tail_items)*: 일정 기간 동안 view가 상위 5%인 article
+* *ncsu(not_cold_start_users)*: 일정 기간(2019.02.15 ~ 2019.02.28) 동안 읽은 article의 수가 평균보다 높은 users
+* *nlti(not_long_tail_items)*: 일정 기간(2019.02.15 ~ 2019.02.28) 동안 view가 상위 5%인 article
 * **Step 1**: *ncsu*와 *nlti*에 대해서만 item-user matrix 생성
 * **Step 2**: item-user martix에서 item에 대해 cosine similarity 구하기
 * **Step 3**: 가장 비슷한 100개의 item의 weighted mean을 이용해 predict
 * **Step 4**: 각 user에 대해 weighted mean이 높은 상위 100개 article을 저장
 
-#### 1) popularity based 추천
-* popularity_based_recommend: 일정 기간 동안 조회수가 높은 인기 글을 추천
-* popularity_based_recommend2: 전체 기간 동안 조회수가 높은 인기 글을 추천
+#### 2) popularity based 추천
+* popularity_based_recommend: 일정 기간(2019.02.15 ~ 2019.02.28) 동안 조회수가 높은 인기 글을 추천
+* popularity_based_recommend2: 전체 기간(처음 ~ 2019.02.28) 동안 조회수가 높은 인기 글을 추천
 
-#### 2) following based 추천
+#### 3) following based 추천
 * following_based_recommend: 읽은 글 중에서 구독작가 글의 비율을 고려하여 추천
 * following_based_recommend2: 구독하는 작가의 글을 추천 (읽지 않아서 추천되지 않는 경우에 대비)
 
-#### 3) magazine based 추천
+#### 4) magazine based 추천
 * magazine_based_recommend: 읽은 글 중에서 매거진 글의 비율을 고려하여 추천
-#### 4) tag based 추천
+#### 5) tag based 추천
 * tag_based_recommend: 읽은 글들에서 자주 나오는 태그를 고려하여 추천
 
 
-#### 6) hybrid based 추천
+#### 6) hybrid 추천
 * hybrid_recommned: 사용자의 소비 경향을 반영하여 종합적으로 추천
 * recent 모드: 최근 읽은 글이 많을 경우, 최근 소비 경향을 반영
 * read 모드: 최근 읽은 글이 적을 경우, 전체 소비 경향을 반영
