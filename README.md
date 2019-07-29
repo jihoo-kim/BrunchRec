@@ -49,17 +49,28 @@
 * 전체 기간(처음 ~ 2019.02.28) 동안 읽은 글의 빈도수 상위 6개를 user의 관심 키워드로 저장 ('read_interest')
 * tag_based_recommend: 읽은 글들에서 자주 나오는 태그를 고려하여 추천 (관심 키워드와 2개 이상 겹치는 경우)
 
-
 ## 3. 추천 알고리즘
-* hybrid_recommned: 사용자의 소비 경향을 반영하여 종합적으로 추천
-* recent 모드: 최근 읽은 글이 많을 경우, 최근 소비 경향을 반영
-* read 모드: 최근 읽은 글이 적을 경우, 전체 소비 경향을 반영
-#### 7) recommender
-* 시간 단축을 위해 metadata의 전체가 아닌 일부만 탐색
+#### 1) 최근 읽은 글의 수에 따라 맞춤형 추천
+* recent 모드: 최근 읽은 글의 수가 상위 80%인 user들의 경우 -> 최근 소비(recent) 경향을 반영
+* read 모드: 최근 읽은 글이 하위 20%인 user들의 경우 -> 전체 소비(read) 경향을 반영
+
+#### 2) 시간 단축을 위해 metadata의 전체가 아닌 일부만 탐색
 * metadata_all -> 처음 ~ 2019.03.14 동안 발행된 글을 제외한 metadata
 * metadata_reg -> 2018.09.15 ~ 2019.03.14 동안 발행된 글의 metadata
 * metadata_pop -> 일정 기간 동안 view가 상위 20%인 글의 metadata
 * metadata_hot -> 추천 기간 동안 발행되었고, view가 상위 20%인 글의 metadata
+
+#### 3) 위의 5가지 추천 방식을 아래와 같은 순서로 추천
+* f1: **metadata_hot**에 대해 **following_based_recommend**을 이용하여 **'recent_view(최근 조회수)'** 순으로 추천 
+* f2: **metadata_reg**에 대해 **following_based_recommend**을 이용하여 **'reg_ts(발행 시간)'** 순으로 추천
+* f3: **metadata_hot**에 대해 **following_based_recommend2**을 이용하여 **'recent_view(최근 조회수)'** 순으로 추천 
+* f4: **metadata_reg**에 대해 **following_based_recommend2**을 이용하여 **'reg_ts(발행 시간)'** 순으로 추천
+* p1: **metadata_hot**에 대해 **popularity_based_recommend2**을 이용하여 추천
+* cf: **metadata_all**에 대해 **collaborative filtering**을 이용하여 추천
+* m1: **metadata_hot**에 대해 **magazine_based_recommend**을 이용하여 **'recent_view(최근 조회수)'** 순으로 추천 
+* m2: **metadata_all**에 대해 **magazine_based_recommend**을 이용하여 **'reg_ts(발행 시간)'** 순으로 추천
+* t: **metadata_hot**에 대해 **tag_based_recommend**을 이용하여 **'recent_view(최근 조회수)'** 순으로 추천 
+* p2: **metadata**에 대해 **popularity_based_recommend2**을 이용하여 추천 (100개가 되지 않았을 경우)
 
 ## 4. 재현 방법
 ### Step 1. 데이터 및 소스 코드 다운로드
