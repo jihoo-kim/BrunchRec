@@ -8,7 +8,7 @@
 * designed by **datartist**
 * 깃헙 주소: https://github.com/jihoo-kim/BrunchRec  
 
-## 1. 간단한 설명
+## 1.  설명
 ### 1. 개요
 * user의 article 소비 경향을 반영하여 추천 (최근 소비 경향, 전체 소비 경향)
 * 다양한 추천 방식을 이용하여 여러 측면에서 추천 (5개의 추천 방식)
