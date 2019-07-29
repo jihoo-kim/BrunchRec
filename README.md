@@ -12,6 +12,8 @@
 ### 1. 개요
 * user의 article 소비 경향을 반영하여 추천
 
+***
+
 ### 2. 추천 방식
 #### 1) collaborative filtering 추천
 * *ncsu(not_cold_start_users)*: 일정 기간(2019.02.15 ~ 2019.02.28) 동안 읽은 article의 수가 평균보다 높은 users
@@ -49,6 +51,8 @@
 * 전체 기간(처음 ~ 2019.02.28) 동안 읽은 글의 빈도수 상위 6개를 user의 관심 키워드로 저장 ('read_interest')
 * **tag_based_recommend**: user의 관심 키워드와 common_num(=2개) 이상 겹치는 태그를 가진 글을 추천
 
+***
+
 ### 3. 추천 알고리즘
 #### 1) 최근 읽은 글의 수에 따라 맞춤형 추천
 * recent 모드: 최근 읽은 글의 수가 상위 80%인 user들의 경우 -> 최근 소비(recent) 경향을 반영
@@ -71,6 +75,9 @@
 * **m2**: metadata_all에 대해 **magazine_based_recommend**을 이용하여 'reg_ts(발행 시간)' 순으로 추천
 * **t**: metadata_hot에 대해 **tag_based_recommend**을 이용하여 'recent_view(최근 조회수)' 순으로 추천 
 * **p2**: metadata에 대해 **popularity_based_recommend2**을 이용하여 추천 (100개가 되지 않았을 경우)
+
+![recommend](https://user-images.githubusercontent.com/50820635/62028508-5e738180-b21b-11e9-862c-3342ff2a5dba.JPG)
+
 
 ## 2. 재현 방법
 ### 1. 데이터 및 소스 코드 다운로드
@@ -101,5 +108,9 @@
 * 기본값은 동일 디렉터리에 결과 파일 생성
 * 다른 곳에 결과 파일을 생성하고 싶다면, recommender 함수의 마지막 입력값에 경로 입력
 
+***
+
 ### 3. 추천 결과 확인
-* recommend_result: user의 article 소비 
+* recommend_result: user의 article 소비 경향 및 추천 글 top 30개 출력
+
+![rec_result](https://user-images.githubusercontent.com/50820635/62028536-6e8b6100-b21b-11e9-81b6-7a2ba7d2b793.jpg)
