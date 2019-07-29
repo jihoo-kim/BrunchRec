@@ -8,7 +8,7 @@
 * designed by **datartist**
 * 깃헙 주소: https://github.com/jihoo-kim/BrunchRec  
 
-## 1.  설명
+## [1] 모델 설명
 ### 1. 개요
 * user의 article 소비 경향을 반영하여 추천 (최근 소비 경향, 전체 소비 경향)
 * 다양한 추천 방식을 이용하여 여러 측면에서 추천 (5개의 추천 방식)
@@ -81,8 +81,8 @@
 ![recommend](https://user-images.githubusercontent.com/50820635/62028650-bd38fb00-b21b-11e9-9c53-fe80203d0000.JPG)
 
 
-## 2. 재현 방법
-### 0. 개발 환경 및 필요 라이브러리
+## [2] 재현 방법
+### 1. 개발 환경 및 필요 라이브러리
 #### 1) 개발 환경
 * Windows 10, i7-9700 CPU, RAM 16.0GB, 64비트
 * Python 3.7.3, IPython 7.4.0, Jupyter Notebook 5.7.8
@@ -94,7 +94,7 @@
 
 ***
 
-### 1. 데이터 및 소스 코드 다운로드
+### 2. 데이터 및 소스 코드 다운로드
 #### 1) res 폴더에 들어갈 파일 다운로드
 * [카카오 아레나 브런치 데이터셋](https://arena.kakao.com/c/2/data)
 * magazine.json, metadata.json, users.json, predict.tar, read.tar 다운로드
@@ -112,7 +112,7 @@
 
 ***
 
-### 2. 소스 코드 실행 및 결과 파일 확인
+### 3. 소스 코드 실행 및 결과 파일 확인
 #### 1) Jupyter Notebook으로 BrunchRec.ipynb 파일 열기
 * Jupyter Notebook이 없을 경우 [설치](https://jupyter.org/install)
 #### 2) 상단 메뉴에서 'Kernel' -> 'Restart & Run All' 클릭
@@ -124,7 +124,7 @@
 
 ***
 
-### 3. 추천 결과 확인
+### 4. 추천 결과 확인
 * recommend_result: user의 article 소비 경향 및 추천 글 top 30개 출력
 * fr(f_ratio) -> target user가 본(또는 추천된) article 중에서 following의 비율
 * mr(m_ratio) -> target user가 본(또는 추천된) article 중에서 magazine의 비율
