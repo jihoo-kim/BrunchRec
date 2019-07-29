@@ -84,8 +84,8 @@
 ## [2] 재현 방법
 ### 1. 개발 환경 및 필요 라이브러리
 #### 1) 개발 환경
-* Windows 10, i7-9700 CPU, RAM 16.0GB, 64비트
-* Python 3.7.3, IPython 7.4.0, Jupyter Notebook 5.7.8
+* Windows 10, i7-9700 CPU, RAM 16.0GB, 64bit
+* conda 4.7.5, Python 3.7.3, IPython 7.4.0, Jupyter Notebook 5.7.8
 #### 2) 필요 라이브러리
 * numpy 1.16.2
 * pandas 0.24.2
