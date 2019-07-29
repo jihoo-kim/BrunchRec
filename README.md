@@ -14,13 +14,13 @@
 
 ### 2. 추천 방식
 #### 1) collaborative filtering 추천
-* item based CF (아이템 기반 협업필터링)
 * *ncsu(not_cold_start_users)*: 일정 기간(2019.02.15 ~ 2019.02.28) 동안 읽은 article의 수가 평균보다 높은 users
 * *nlti(not_long_tail_items)*: 일정 기간(2019.02.15 ~ 2019.02.28) 동안 view가 상위 5%인 article
 * **Step 1**: *ncsu*와 *nlti*에 대해서만 item-user matrix 생성
 * **Step 2**: item-user martix에서 item에 대해 cosine similarity 구하기
 * **Step 3**: 가장 비슷한 100개의 item의 weighted mean을 이용해 predict
 * **Step 4**: 각 user에 대해 weighted mean이 높은 상위 100개 article을 저장
+* collaborative filtering: 아이템 기반 협업필터링
 
 #### 2) popularity based 추천
 * 파레토 법칙(Pareto Principle): 전체 결과의 80%가 전체 원인의 20%에서 일어나는 현상
