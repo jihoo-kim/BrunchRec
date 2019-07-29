@@ -4,7 +4,7 @@
 * 공식 홈페이지: https://arena.kakao.com/c/2
 * 베이스 코드: https://github.com/kakao-arena/brunch-article-recommendation
 
-### BrunchRec 
+### BrunchRec v9.0.1 
 * designed by **datartist**
 * 깃헙 주소: https://github.com/jihoo-kim/BrunchRec  
 
