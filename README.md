@@ -71,7 +71,7 @@
 * **f2**: metadata_reg에 대해 **following_based_recommend**을 이용하여 'reg_ts(발행 시간)' 순으로 추천
 * **f3**: metadata_hot에 대해 **following_based_recommend2**을 이용하여 'recent_view(최근 조회수)' 순으로 추천 
 * **f4**: metadata_reg에 대해 **following_based_recommend2**을 이용하여 'reg_ts(발행 시간)' 순으로 추천
-* **p1**: metadata_hot에 대해 **popularity_based_recommend2**을 이용하여 추천
+* **p1**: metadata_hot에 대해 **popularity_based_recommend**을 이용하여 추천
 * **cf**: metadata_all에 대해 **collaborative filtering**을 이용하여 추천
 * **m1**: metadata_hot에 대해 **magazine_based_recommend**을 이용하여 'recent_view(최근 조회수)'** 순으로 추천 
 * **m2**: metadata_all에 대해 **magazine_based_recommend**을 이용하여 'reg_ts(발행 시간)' 순으로 추천
