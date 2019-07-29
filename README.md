@@ -10,7 +10,7 @@
 
 ## 1. 간단한 설명
 ### 1. 개요
-* 사용자의 글 소비 경향을 반영하여 추천
+* user의 article 소비 경향을 반영하여 추천
 
 ### 2. 추천 방식
 #### 1) collaborative filtering 추천
@@ -23,20 +23,34 @@
 * **Step 4**: 각 user에 대해 weighted mean이 높은 상위 100개 article을 저장
 
 #### 2) popularity based 추천
+* 파레토 법칙(Pareto Principle): 전체 결과의 80%가 전체 원인의 20%에서 일어나는 현상
+* 인기 많은(=조회수 높은) 상위 20%의 article들이 많이 소비되는 경향이 있음
 * popularity_based_recommend: 일정 기간(2019.02.15 ~ 2019.02.28) 동안 조회수가 높은 인기 글을 추천
 * popularity_based_recommend2: 전체 기간(처음 ~ 2019.02.28) 동안 조회수가 높은 인기 글을 추천
 
 #### 3) following based 추천
-* following_based_recommend: 읽은 글 중에서 구독작가 글의 비율을 고려하여 추천
+* 브런치 플랫폼 특성상 구독하는 작가의 글을 많이 읽는 경향이 있음
+* 전체 user의 98%가 구독하는 작가가 있음 (평균 8.6명)
+* 일정 기간(2019.02.15 ~ 2019.02.28) 동안 읽은 글 중에서 구독 작가별 빈도수를 저장 ('recent_following')
+* 전체 기간(처음 ~ 2019.02.28) 동안 읽은 글 중에서 구독 작가별 빈도수를 저장 ('read_following')
+* following_based_recommend: 읽은 글 중에서 구독작가 글의 비율을 고려하여 추천 (비율이 클수록 많이 추천)
 * following_based_recommend2: 구독하는 작가의 글을 추천 (읽지 않아서 추천되지 않는 경우에 대비)
 
 #### 4) magazine based 추천
+* 같은 매거진의 글을 많이 읽는 경향이 있음
+* 일정 기간(2019.02.15 ~ 2019.02.28) 동안 읽은 글 중에서 매거진별 빈도수를 저장 ('recent_magazine')
+* 전체 기간(처음 ~ 2019.02.28) 동안 읽은 글 중에서 매거진별 빈도수를 저장 ('read_magazine')
 * magazine_based_recommend: 읽은 글 중에서 매거진 글의 비율을 고려하여 추천
+
 #### 5) tag based 추천
-* tag_based_recommend: 읽은 글들에서 자주 나오는 태그를 고려하여 추천
+* 읽은 글들의 태그와 같은 태그를 가진 글을 읽는 경향이 있음
+* 읽은 글들의 태그는 user의 관심 키워드라고 볼 수 있음
+* 일정 기간(2019.02.15 ~ 2019.02.28) 동안 읽은 글의 빈도수 상위 6개를 user의 관심 키워드로 저장 ('recent_interest')
+* 전체 기간(처음 ~ 2019.02.28) 동안 읽은 글의 빈도수 상위 6개를 user의 관심 키워드로 저장 ('read_interest')
+* tag_based_recommend: 읽은 글들에서 자주 나오는 태그를 고려하여 추천 (관심 키워드와 2개 이상 겹치는 경우)
 
 
-#### 6) hybrid 추천
+## 3. 추천 알고리즘
 * hybrid_recommned: 사용자의 소비 경향을 반영하여 종합적으로 추천
 * recent 모드: 최근 읽은 글이 많을 경우, 최근 소비 경향을 반영
 * read 모드: 최근 읽은 글이 적을 경우, 전체 소비 경향을 반영
@@ -47,7 +61,7 @@
 * metadata_pop -> 일정 기간 동안 view가 상위 20%인 글의 metadata
 * metadata_hot -> 추천 기간 동안 발행되었고, view가 상위 20%인 글의 metadata
 
-## 2. 재현 방법
+## 4. 재현 방법
 ### Step 1. 데이터 및 소스 코드 다운로드
 #### 1) res 폴더에 들어갈 파일 다운로드
 * [카카오 아레나 브런치 데이터셋](https://arena.kakao.com/c/2/data)
