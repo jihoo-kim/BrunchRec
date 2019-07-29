@@ -76,7 +76,7 @@
 * **t**: metadata_hot에 대해 **tag_based_recommend**을 이용하여 'recent_view(최근 조회수)' 순으로 추천 
 * **p2**: metadata에 대해 **popularity_based_recommend2**을 이용하여 추천 (100개가 되지 않았을 경우)
 
-![recommend](https://user-images.githubusercontent.com/50820635/62028508-5e738180-b21b-11e9-862c-3342ff2a5dba.JPG)
+![recommend](https://user-images.githubusercontent.com/50820635/62028650-bd38fb00-b21b-11e9-9c53-fe80203d0000.JPG)
 
 
 ## 2. 재현 방법
