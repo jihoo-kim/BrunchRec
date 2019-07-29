@@ -19,7 +19,7 @@
 ### 2. 추천 방식
 #### 1) collaborative filtering 추천
 * *ncsu(not_cold_start_users)*: 일정 기간(2019.02.15 ~ 2019.02.28) 동안 읽은 article의 수가 평균보다 높은 users
-* *nlti(not_long_tail_items)*: 일정 기간(2019.02.15 ~ 2019.02.28) 동안 view가 상위 5%인 article
+* *nlti(not_long_tail_items)*: 일정 기간(2019.02.15 ~ 2019.02.28) 동안 view가 상위 5%인 articles
 * Step 1: *ncsu*와 *nlti*에 대해서만 item-user matrix 생성
 * Step 2: item-user martix에서 item에 대해 cosine similarity 구하기
 * Step 3: 가장 비슷한 100개의 item의 weighted mean을 이용해 predict
@@ -37,7 +37,7 @@
 * 전체 user의 98%가 구독하는 작가가 있음 (평균 8.6명)
 * 일정 기간(2019.02.15 ~ 2019.02.28) 동안 읽은 글 중에서 구독 작가별 빈도수를 저장 ('recent_following')
 * 전체 기간(처음 ~ 2019.02.28) 동안 읽은 글 중에서 구독 작가별 빈도수를 저장 ('read_following')
-* **following_based_recommend**: 읽은 글 중에서 구독작가 글의 비율을 고려하여 추천 (비율이 클수록 많이 추천)
+* **following_based_recommend**: 읽은 글 중에서 구독작가 글의 비율을 고려하여 추천
 * **following_based_recommend2**: 구독하는 작가의 글을 추천 (읽지 않아서 추천되지 않는 경우에 대비)
 
 #### 4) magazine based 추천
