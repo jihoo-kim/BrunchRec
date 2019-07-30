@@ -4,7 +4,7 @@
 * 공식 홈페이지: https://arena.kakao.com/c/2
 * 베이스 코드: https://github.com/kakao-arena/brunch-article-recommendation
 
-### BrunchRec v9.0.1 
+### BrunchRec v9.0.3
 * designed by **datartist**
 * 깃헙 주소: https://github.com/jihoo-kim/BrunchRec  
 
@@ -97,9 +97,9 @@
 ### 2. 데이터 및 소스 코드 다운로드
 #### 1) res 폴더에 들어갈 파일 다운로드
 * [카카오 아레나 브런치 데이터셋](https://arena.kakao.com/c/2/data)
-* magazine.json, metadata.json, users.json, predict.tar, read.tar 다운로드
+* metadata.json, users.json, predict.tar, read.tar 다운로드
 * predict.tar, read.tar은 res 폴더에 아래의 그림과 같이 압축 해제
-* contents 폴더의 data.0 ~ data.6은 다운로드할 필요 없음
+* magazine.json과 contents 폴더의 data.0 ~ data.6은 다운로드할 필요 없음
 #### 2) pickle 폴더에 들어갈 파일 다운로드
 * 중간 데이터 파일 (시간 단축)
 * [dev.users용](https://drive.google.com/file/d/16IZSKdK8sFzeHx0Z07oH3HcbbYQZAkQJ/view?usp=sharing)
