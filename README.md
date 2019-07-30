@@ -108,7 +108,7 @@
 * 소스 코드 파일 (Jupyter Notebook)
 * [BrunchRec.ipynb](https://github.com/jihoo-kim/BrunchRec/archive/master.zip)
 
-![dir_small](https://user-images.githubusercontent.com/50820635/61771159-01965680-ae2a-11e9-960f-162638459a3d.jpg)
+![dir_small](https://user-images.githubusercontent.com/50820635/62103916-ed929f00-b2d8-11e9-9e49-da7a6416355a.jpg)
 
 ***
 
