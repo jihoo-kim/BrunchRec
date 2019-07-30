@@ -4,13 +4,14 @@
 * 공식 홈페이지: https://arena.kakao.com/c/2
 * 베이스 코드: https://github.com/kakao-arena/brunch-article-recommendation
 
-### BrunchRec v9.0.3
+### BrunchRec v9.0.4
 * designed by **datartist**
 * 깃헙 주소: https://github.com/jihoo-kim/BrunchRec  
 
 ## [1] 모델 설명
 ### 1. 개요
 * user의 article 소비 경향을 반영하여 추천 (최근 소비 경향, 전체 소비 경향)
+* 최근 소비 경향은 추천 기간(2019.02.22~2019.03.14) 일주일 전인 2019.02.15부터로 설정
 * 다양한 추천 방식을 이용하여 여러 측면에서 추천 (5개의 추천 방식)
 * 시간 단축을 위해 metadata의 일부만 탐색 (4개의 metadata)
 
@@ -71,12 +72,12 @@
 * **f2**: metadata_reg에 대해 **following_based_recommend**을 이용하여 'reg_ts(발행 시간)' 순으로 추천
 * **f3**: metadata_hot에 대해 **following_based_recommend2**을 이용하여 'recent_view(최근 조회수)' 순으로 추천 
 * **f4**: metadata_reg에 대해 **following_based_recommend2**을 이용하여 'reg_ts(발행 시간)' 순으로 추천
-* **p1**: metadata_hot에 대해 **popularity_based_recommend**을 이용하여 추천
+* **p1**: metadata_pop에 대해 **popularity_based_recommend**을 이용하여 추천
 * **cf**: metadata_all에 대해 **collaborative filtering**을 이용하여 추천
-* **m1**: metadata_hot에 대해 **magazine_based_recommend**을 이용하여 'recent_view(최근 조회수)'** 순으로 추천 
+* **m1**: metadata_hot에 대해 **magazine_based_recommend**을 이용하여 'recent_view(최근 조회수)' 순으로 추천 
 * **m2**: metadata_all에 대해 **magazine_based_recommend**을 이용하여 'reg_ts(발행 시간)' 순으로 추천
 * **t**: metadata_hot에 대해 **tag_based_recommend**을 이용하여 'recent_view(최근 조회수)' 순으로 추천 
-* **p2**: metadata에 대해 **popularity_based_recommend2**을 이용하여 추천 (100개가 되지 않았을 경우)
+* **p2**: metadata(원본)에 대해 **popularity_based_recommend2**을 이용하여 추천 (100개가 되지 않았을 경우)
 
 ![recommend](https://user-images.githubusercontent.com/50820635/62028650-bd38fb00-b21b-11e9-9c53-fe80203d0000.JPG)
 
