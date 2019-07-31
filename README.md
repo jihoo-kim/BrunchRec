@@ -117,7 +117,7 @@
 #### 1) Jupyter Notebook으로 BrunchRec.ipynb 파일 열기
 * Jupyter Notebook이 없을 경우 [설치](https://jupyter.org/install)
 #### 2) 상단 메뉴에서 'Kernel' -> 'Restart & Run All' 클릭
-* 약 1시간 50분 소요
+* 약 1시간 50분 소요 (pickle 포함시)
 * 기본값은 test.users로 설정되어 있음
 * dev.users에 대해 추천을 하고 싶다면, 소스 코드 하단에 주석 처리 변경
 #### 3) 결과 파일 'recommend.txt' 생성 확인
