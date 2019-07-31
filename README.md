@@ -19,7 +19,7 @@
 
 ### 2. 추천 방식
 #### 1) collaborative filtering 추천
-* *ncsu(not_cold_start_users)*: 일정 기간(2019.02.15 ~ 2019.02.28) 동안 읽은 의 수가 평균보다 높은 users
+* *ncsu(not_cold_start_users)*: 일정 기간(2019.02.15 ~ 2019.02.28) 동안 읽은 글의 수가 평균보다 높은 users
 * *nlti(not_long_tail_items)*: 일정 기간(2019.02.15 ~ 2019.02.28) 동안 조회수가 상위 5%인 articles
 * Step 1: *ncsu*와 *nlti*에 대해서만 item-user matrix 생성
 * Step 2: item-user martix에서 item에 대해 cosine similarity 구하기
