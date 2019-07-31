@@ -24,7 +24,7 @@
 * Step 1: *ncsu*와 *nlti*에 대해서만 item-user matrix 생성
 * Step 2: item-user martix에서 item에 대해 cosine similarity 구하기
 * Step 3: 가장 비슷한 100개의 item의 weighted mean을 이용해 predict
-* Step 4: 각 user에 대해 weighted mean이 높은 상위 100개 article을 저장
+* Step 4: 각 user에 대해 weighted mean이 높은 상위 100개 article을 저장 (cf_dic)
 * **collaborative filtering**: 아이템 기반 협업필터링
 
 #### 2) popularity based 추천
@@ -61,7 +61,7 @@
 * recent 모드: 최근 읽은 글의 수가 상위 80%인 user들의 경우 -> 최근 소비(recent) 경향을 반영
 * read 모드: 최근 읽은 글이 하위 20%인 user들의 경우 -> 전체 소비(read) 경향을 반영
 
-#### 2) 시간 단축 및 정확성을 위해 metadata의 subset 
+#### 2) 시간 단축 및 정확성을 위해 metadata의 subset 이용 
 * metadata_all -> 추천 기간 이후에 발행된 글을 제외한 metadata (629,252개)
 * metadata_reg -> 추천 기간을 포함한 최근 6개월 동안 발행된 글의 metadata (127,218개)
 * metadata_pop -> 최근 view가 상위 20%인 글의 metadata (126,666개)
