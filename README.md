@@ -13,14 +13,14 @@
 * user의 article 소비 경향을 반영하여 추천 (최근 소비 경향, 전체 소비 경향)
 * 최근 소비 경향은 추천 기간(2019.02.22~2019.03.14) 일주일 전인 2019.02.15부터로 설정
 * 다양한 추천 방식을 이용하여 여러 측면에서 추천 (5개의 추천 방식)
-* 시간 단축 및 정확성을 위해 metadata의 subset 탐색 (4개의 metadata)
+* 시간 단축 및 정확성을 위해 metadata의 subset 이용 (4개의 metadata의 subset)
 
 ***
 
 ### 2. 추천 방식
 #### 1) collaborative filtering 추천
 * *ncsu(not_cold_start_users)*: 일정 기간(2019.02.15 ~ 2019.02.28) 동안 읽은 article의 수가 평균보다 높은 users
-* *nlti(not_long_tail_items)*: 일정 기간(2019.02.15 ~ 2019.02.28) 동안 view가 상위 5%인 articles
+* *nlti(not_long_tail_items)*: 일정 기간(2019.02.15 ~ 2019.02.28) 동안 조회수가 상위 5%인 articles
 * Step 1: *ncsu*와 *nlti*에 대해서만 item-user matrix 생성
 * Step 2: item-user martix에서 item에 대해 cosine similarity 구하기
 * Step 3: 가장 비슷한 100개의 item의 weighted mean을 이용해 predict
@@ -61,7 +61,7 @@
 * recent 모드: 최근 읽은 글의 수가 상위 80%인 user들의 경우 -> 최근 소비(recent) 경향을 반영
 * read 모드: 최근 읽은 글이 하위 20%인 user들의 경우 -> 전체 소비(read) 경향을 반영
 
-#### 2) 시간 단축 및 정확성을 위해 metadata의 subset 탐색
+#### 2) 시간 단축 및 정확성을 위해 metadata의 subset 
 * metadata_all -> 추천 기간 이후에 발행된 글을 제외한 metadata (629,252개)
 * metadata_reg -> 추천 기간을 포함한 최근 6개월 동안 발행된 글의 metadata (127,218개)
 * metadata_pop -> 최근 view가 상위 20%인 글의 metadata (126,666개)
@@ -73,7 +73,7 @@
 * **f3**: metadata_hot에 대해 **following_based_recommend2**을 이용하여 'recent_view(최근 조회수)' 순으로 추천 
 * **f4**: metadata_reg에 대해 **following_based_recommend2**을 이용하여 'reg_ts(발행 시간)' 순으로 추천
 * **p1**: metadata_pop에 대해 **popularity_based_recommend**을 이용하여 추천
-* **cf**: metadata_all에 대해 **collaborative filtering**을 이용하여 추천
+* **cf**: metadata(원본)에 대해 **collaborative filtering**을 이용하여 추천
 * **m1**: metadata_hot에 대해 **magazine_based_recommend**을 이용하여 'recent_view(최근 조회수)' 순으로 추천 
 * **m2**: metadata_all에 대해 **magazine_based_recommend**을 이용하여 'reg_ts(발행 시간)' 순으로 추천
 * **t**: metadata_hot에 대해 **tag_based_recommend**을 이용하여 'recent_view(최근 조회수)' 순으로 추천 
